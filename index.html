@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page HTML</title>
+  <script src="script/ssg.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <style> @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');</style>
+</head>
+<body>
+
+    <nav>
+        <a href="">Menu</a>
+    </nav>
+  <!-- fixed content here -->
+  <div id="ssg-container">
+
+      <!-- ---------------------------- Entrance ---------------------------- -->
+      <div class="ssg-page">
+        <div id="headingText">
+            <p id="subtitle">A look inside the Blue Zones</p>
+            <p>Passing the</p>
+            <div class="counter"></div>
+            <p>years of age</p>
+        </div>
+
+        <img class="img img1" src="img/bw/ikaria-centenarians-slide-BATK-superJumbo.png" alt="stomatis moratis in garden">
+        <img class="img img2" src="img/bw/ikaria-centenarians-slide-CKQO-superJumbo.png" alt="stomatis moratis in garden">
+        <img class="img img3" src="img/bw/ikaria-centenarians-slide-FRXG-superJumbo.png" alt="stomatis moratis in garden">
+        <img class="img img4" src="img/bw/ikaria-centenarians-slide-LZ84-superJumbo.png" alt="stomatis moratis in garden">
+        <img class="img img5" src="img/bw/ikaria-centenarians-slide-OX27-superJumbo.png" alt="stomatis moratis in garden">
+        <img class="img img6" src="img/bw/ikaria-centenarians-slide-PPN1-superJumbo.png" alt="stomatis moratis in garden">
+        <img class="img img7" src="img/bw/ikaria-centenarians-slide-R80D-superJumbo.png" alt="stomatis moratis in garden">
+        <img class="img img8" src="img/bw/ikaria-centenarians-slide-RB6L-superJumbo.png" alt="stomatis moratis in garden">
+          
+          
+        <!-- Chidden content (right) -->
+            <!-- <button onclick="ssg.revealRight()">right</button>
+            <div class="ssg-child-right">
+                hidden content (right)
+                <button onclick="ssg.conceal()">back</button>
+            </div> -->
+        
+      </div>
+
+      <!-- ---------------------------- The blue zones ---------------------------- -->
+      <div class="ssg-page">
+          <h1>The Blue Zones</h1>
+          
+          <a href="" onclick="ssg.revealRight()">right</a>
+          <div class="ssg-child-right">
+              hidden content (right)
+              <button onclick="ssg.conceal()">back</button>
+          </div>
+          
+          <button onclick="ssg.revealLeft()">left</button>
+          <div class="ssg-child-left">
+              hidden content (left)
+              <button onclick="ssg.conceal()">back</button>
+          </div>
+      </div>
+
+      <!-- ---------------------------- The 9 Life Rule ---------------------------- -->
+      <div class="ssg-page">
+          <h1>The 9 Life Rules</h1>
+          
+          
+          
+          <!-- <button onclick="ssg.revealLeft()">left</button>
+          <div class="ssg-child-left">
+              hidden content (left)
+              <button onclick="ssg.conceal()">back</button>
+          </div> -->
+      </div>
+
+      <!-- ---------------------------- The Story of... ---------------------------- -->
+      <div class="ssg-page">
+          <h1>The Story of {hovered Name}</h1>
+          
+          <div id="div1">
+            <button onclick="ssg.revealLeft()" class="buttonAsTitle"><h2>Stamatis <br> Moraitis</h2></button>
+            <img src="img/1_stomatis_moratis.png" alt="">
+          </div>
+          <div class="ssg-child-left">
+              hidden content (left)
+              <button onclick="ssg.conceal()">back</button>
+          </div>
+
+          <div id="div2">
+            <img src="" alt="">
+          </div>
+      </div>
+
+      <!-- ---------------------------- Final ---------------------------- -->
+      <div class="ssg-page">
+          <h1>Will you be getting 100?</h1>
+          
+          <div class="ssg-child-left">
+              hidden content (left)
+              <button onclick="ssg.conceal()">back</button>
+          </div>
+
+      </div>
+
+  </div>
+
+  <script src="script/main.js"></script>
+</body>
+
+</html>
