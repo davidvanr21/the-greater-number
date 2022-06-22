@@ -1,110 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page HTML</title>
-  <script src="script/ssg.js"></script>
-  <link rel="stylesheet" href="style/style.css">
-  <style> @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');</style>
+    <!-- meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Blue Zones - Ontwerpen 1</title>
+    
+    <script src="script/ssg.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');</style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/eps" sizes="16x16" href="/img/favicon/blueCircle_16.ico">
 </head>
 <body>
-
-    <nav>
-        <a href="">Menu</a>
-    </nav>
   <!-- fixed content here -->
   <div id="ssg-container">
+
+    <nav>
+        <a href="conceptPage.html">Concept page</a>
+    </nav>
 
       <!-- ---------------------------- Entrance ---------------------------- -->
       <div class="ssg-page">
         <div id="headingText">
-            <p id="subtitle">A look inside the Blue Zones</p>
-            <p>Passing the</p>
-            <div class="counter"></div>
-            <p>years of age</p>
+            <div>
+                <div>
+                    <span class="subtitle xsmall">A</span>
+                    <span class="subtitle xsmall">look</span>
+                    <span class="subtitle xsmall">inside</span>
+                    <span class="subtitle xsmall">the</span>
+                    <span class="subtitle">Blue</span>
+                    <span class="subtitle">Zones</span>
+                </div>
+
+                <div class="bigHeadingTop">
+                    <span>Passing</span>
+                    <span>the</span>
+                </div>
+                
+                <div class="bigHeading">
+                    <span><div class="counter"></div></span>
+                </div>
+
+                <div class="bigHeading">
+                    <span>years</span>
+                    <span>of</span>
+                    <span>age</span>
+                </div>    
+            </div>
+
+            <div>
+                <!-- <span>
+                    <p class="intro">
+                        Discover the amazing stories of the worlds most old and healthy people.
+                        See how they're living and how you can have a healthy live too.
+                    </p>
+                </span> -->
+
+                <!-- Scroll down source: https://github.com/bjarkebrodin/scrollsogood#scrolling -->
+                <button onclick="ssg.scrollDown()">Down</button>
+            </div>
         </div>
 
-        <img class="img img1" src="img/bw/ikaria-centenarians-slide-BATK-superJumbo.png" alt="stomatis moratis in garden">
-        <img class="img img2" src="img/bw/ikaria-centenarians-slide-CKQO-superJumbo.png" alt="stomatis moratis in garden">
-        <img class="img img3" src="img/bw/ikaria-centenarians-slide-FRXG-superJumbo.png" alt="stomatis moratis in garden">
-        <img class="img img4" src="img/bw/ikaria-centenarians-slide-LZ84-superJumbo.png" alt="stomatis moratis in garden">
-        <img class="img img5" src="img/bw/ikaria-centenarians-slide-OX27-superJumbo.png" alt="stomatis moratis in garden">
-        <img class="img img6" src="img/bw/ikaria-centenarians-slide-PPN1-superJumbo.png" alt="stomatis moratis in garden">
-        <img class="img img7" src="img/bw/ikaria-centenarians-slide-R80D-superJumbo.png" alt="stomatis moratis in garden">
-        <img class="img img8" src="img/bw/ikaria-centenarians-slide-RB6L-superJumbo.png" alt="stomatis moratis in garden">
+
+        <img class="img img1" src="img/color/ikaria-centenarians-slide-BATK-superJumbo.jpg.png" alt="">
+        <img class="img img2" src="img/color/ikaria-centenarians-slide-CKQO-superJumbo.png" alt="">
+        <img class="img img3" src="img/color/ikaria-centenarians-slide-FRXG-superJumbo.png" alt="">
+        <img class="img img4" src="img/color/ikaria-centenarians-slide-LZ84-superJumbo.png" alt="">
+        <img class="img img5" src="img/color/ikaria-centenarians-slide-OX27-superJumbo.png" alt="">
+        <img class="img img6" src="img/color/ikaria-centenarians-slide-PPN1-superJumbo.png" alt="">
+        <img class="img img7" src="img/color/ikaria-centenarians-slide-R80D-superJumbo.png" alt="">
+        <img class="img img8" src="img/color/ikaria-centenarians-slide-RB6L-superJumbo.png" alt="">
+        <img class="img img9" src="img/color/ikaria-centenarians-slide-98U6-superJumbo.png" alt="">
+        <img class="img img10" src="img/color/ikaria-centenarians-slide-BAC2-superJumbo.png" alt="">
           
-          
-        <!-- Chidden content (right) -->
-            <!-- <button onclick="ssg.revealRight()">right</button>
-            <div class="ssg-child-right">
-                hidden content (right)
-                <button onclick="ssg.conceal()">back</button>
-            </div> -->
         
       </div>
 
-      <!-- ---------------------------- The blue zones ---------------------------- -->
-      <div class="ssg-page">
-          <h1>The Blue Zones</h1>
-          
-          <a href="" onclick="ssg.revealRight()">right</a>
-          <div class="ssg-child-right">
-              hidden content (right)
-              <button onclick="ssg.conceal()">back</button>
-          </div>
-          
-          <button onclick="ssg.revealLeft()">left</button>
-          <div class="ssg-child-left">
-              hidden content (left)
-              <button onclick="ssg.conceal()">back</button>
-          </div>
-      </div>
+        <!-- ---------------------------- Blue Zones ---------------------------- -->
+        <div class="ssg-page blueZones">
+            <div class="bz_intro">
+                <h1>The Blue Zones</h1>
+                <p >
+                    There are 5 places on earth where people get frequently older than anywhere else in the world.
+                    Scientist have turn them Blue Zones. And have spent decades trying to understand
+                    what they do differently to achieve longer lifespend. Loma Linda <span>(USA)</span>, Nicoya (Costa Rica),
+                    Sardinia (Italy), Icaria (Greece) and Okinawa (Japan).
+                </p>
 
-      <!-- ---------------------------- The 9 Life Rule ---------------------------- -->
-      <div class="ssg-page">
-          <h1>The 9 Life Rules</h1>
-          
-          
-          
-          <!-- <button onclick="ssg.revealLeft()">left</button>
-          <div class="ssg-child-left">
-              hidden content (left)
-              <button onclick="ssg.conceal()">back</button>
-          </div> -->
-      </div>
+            </div>
+
+            <section>
+                <div id="worldMap"></div>
+            </section>
+        </div>
+
+    <!-- ---------------------------- The Story of... ---------------------------- -->
+    <div class="ssg-page">
+
+        <div class="about_content">
+            <h1>The 9 rules of life</h1>
+            <p>
+              These are the 9 most important things to do in life to live
+              as long as possible.
+            </p>
+        </div>
+
+        <div class="circles">
+            <div class="circle circle01">
+                <img src="img/9rules/food_round.png" alt="" class="circleImg">
+                <p>
+                    <span>1.</span>
+                    <br>
+                    Move naturally
+                </p>
+            </div>
+            <div class="circle circle02">
+                <img src="img/9rules/relax_round.png" alt="" class="circleImg">
+                <p>
+                    <span>2.</span>
+                    <br>
+                    Purpose
+                </p>
+            </div>
+            <div class="circle circle03">
+                <img src="img/9rules/food_round.png" alt="" class="circleImg">
+                <p>
+                    <span>3.</span>
+                    <br>
+                    Down shift
+                </p>
+            </div>
+            <div class="circle circle04">
+                <img src="img/9rules/food_round.png" alt="" class="circleImg">
+                <p>
+                    <span>4.</span>
+                    <br>
+                    80% Rule
+                </p>
+            </div>
+            <div class="circle circle05">
+                <img src="img/9rules/food_round.png" alt="" class="circleImg">
+                <p>
+                    <span>5.</span>
+                    <br>
+                    Plant slant
+                </p>
+            </div>
+            <div class="circle circle06">
+                <img src="img/9rules/food_round.png" alt="" class="circleImg">
+                <p>
+                    <span>6.</span>
+                    <br>
+                    Wine at 5
+                </p>
+            </div>
+            <div class="circle circle07">
+                <img src="img/9rules/friends_round.png" alt="" class="circleImg">
+                <p>
+                    <span>7.</span>
+                    <br>
+                    Belong
+                </p>
+            </div>
+            <div class="circle circle08">
+                <img src="img/9rules/food_round.png" alt="" class="circleImg">
+                <p>
+                    <span>8.</span>
+                    <br>
+                    Loved ones first
+                </p>
+            </div>
+            <div class="circle circle09">
+                <img src="img/9rules/food_round.png" alt="" class="circleImg">
+                <p>
+                    <span class="rule">9.</span>
+                    <br>
+                    Right trible
+                </p>
+            </div>
+        </div>
+    </div>
 
       <!-- ---------------------------- The Story of... ---------------------------- -->
       <div class="ssg-page">
-          <h1>The Story of {hovered Name}</h1>
-          
-          <div id="div1">
-            <button onclick="ssg.revealLeft()" class="buttonAsTitle"><h2>Stamatis <br> Moraitis</h2></button>
-            <img src="img/1_stomatis_moratis.png" alt="">
-          </div>
-          <div class="ssg-child-left">
-              hidden content (left)
-              <button onclick="ssg.conceal()">back</button>
-          </div>
 
-          <div id="div2">
-            <img src="" alt="">
-          </div>
-      </div>
+        <div class="about_content">
+          <h1>The Story of...</h1>
+          <p>
+            Read the stories of these two amazing people who are 100+.
+            Discover what their recipe is for a long and healthy life.
+          </p>
+        </div>
+
+            <!-- Stamatis -->
+            <div class="aboutPersonChoice">
+                <img src="img/about_stamatis_bw.png" alt="">
+
+                <button onclick="ssg.revealLeft()">
+                    <h2>
+                        Stamatis
+                        <br>
+                        Moraitis
+                    </h2>
+                </button>
+
+            </div>
+            <!-- Stamatis page left -->
+            <div class="ssg-child-left">
+                hidden content (left)
+                <button onclick="ssg.conceal()">back</button>
+            </div>
+            
+
+
+            <!-- Marie -->
+            <div class="aboutPersonChoice">
+                <img src="img/about_grandmother_bw.png" alt="">
+
+                <button onclick="ssg.revealRight()">
+                    <h2>
+                        Grandmother
+                        <br>
+                        of Suelo
+                    </h2>
+                </button>
+            </div>
+            <!-- Marie page right -->
+            <div class="ssg-child-right">
+                <button onclick="ssg.conceal()" class="backButton">Return</button>
+                <img src="./img/about/grandmother.png" alt="" class="aboutImg">
+            </div>
+
+    </div>
 
       <!-- ---------------------------- Final ---------------------------- -->
       <div class="ssg-page">
           <h1>Will you be getting 100?</h1>
           
-          <div class="ssg-child-left">
-              hidden content (left)
-              <button onclick="ssg.conceal()">back</button>
-          </div>
+
+            <button onclick="ssg.revealRight()">right</button>
+            <div class="ssg-child-right">
+                hidden content (right)
+                <button onclick="ssg.conceal()">back</button>
+            </div>
+
+
 
       </div>
 
   </div>
 
+  <script src="script/lottie.js"></script>
   <script src="script/main.js"></script>
 </body>
 

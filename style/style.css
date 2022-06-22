@@ -15,6 +15,8 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /* Font: Cardo, got this font from https://fonts.google.com/specimen/Cardo?category=Serif&preview.text=A%20LOOK%20INSIDE%20THE&preview.text_type=custom#standard-styles */
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+/* Font Work Sans, Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   /* fonts */
@@ -22,6 +24,7 @@ body {
   --font-heading1: "Prata", serif;
   --font-body: "Prata", serif;
   --font-menu-item: "Cardo", serif;
+  --font-bodySans: "Work Sans", sans-serif;
 
   /* colors */
   --color-black: #000000;
@@ -30,6 +33,23 @@ body {
   --color-grey-light: #7b7b7b;
   --color-grey-tint: #F7F7F7;
   --color-white: #ffffff;
+}
+
+::selection {
+    color: var(--color-white);
+    background: var(--color-dark);
+  }
+
+p {
+    font-family: var(--font-bodySans);
+    /* text-transform: uppercase; */
+    font-size: 1.5em;
+}
+
+h1 {
+    font-family: var(--font-heading1);
+    text-transform: uppercase;
+    font-size: 5em;
 }
 
 /* ------------------------ Menu ------------------------ */
@@ -58,123 +78,47 @@ ul li {
     position: absolute;
 }
 
-/* counter */
-#headingText div {
+#headingText {
     font-family: var(--font-heading1);
-    font-size: 20em;
-    font-weight: 400;
-    line-height: 100%;
-}
-
-#headingText div:hover {
-    cursor: pointer;
-}
-
-#headingText p {
-    font-family: var(--font-heading1);
-    font-size: 10em;
+    font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-#headingText #subtitle {
-    color: red;
+.bigHeading {
+    font-size: 5em;
+    /* margin-top: 10%; */
+}
+
+.bigHeadingTop {
+    font-size: 5em;
+    margin-top: 6%;
+}
+
+.subtitle {
+    font-family: var(--font-heading1);
+    color: var(--color-dark);
+    font-size: 2em;
+    padding: 0 7px;
+}
+
+.xsmall {
     font-size: 1em;
+    color: var(--color-grey-light);
+    padding: 0 2px;
 }
 
-/* ------------------------ Images */
-.img {
-    position: absolute;
-    height: 4%;
-    width: auto;
-    z-index: 1;
-    border: none;
-    transition: 1s;
+.intro {
+    font-family: var(--font-bodySans);
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 50px;
 }
 
-.img:hover {
-    border: 2px solid var(--color-dark);
-    /* padding: 5px; */
-    cursor: pointer;
-    transition: 120ms;
-}
-
-.img1 {
-    top: 5%;
-    left: 9%;
-    animation: circle1 30s linear infinite;
-}
-
-.img2 {
-    top: 15%;
-    left: 13%;
-    animation: circle2 30s linear infinite;
-}
-.img3 {
-    top: 7%;
-    left: 24%;
-    animation: circle3 30s linear infinite;
-}
-.img4 {
-    top: 13%;
-    left: 44%;
-    animation: circle4 30s linear infinite;
-}
-.img5 {
-    top: 3%;
-    right: 31%;
-    animation: circle4 30s linear infinite;
-}
-.img6 {
-    top: 6%;
-    right: 17%;
-    animation: circle3 30s linear infinite;
-}
-.img7 {
-    top: 11%;
-    right: 10%;
-    animation: circle2 30s linear infinite;
-}
-.img8 {
-    top: 18%;
-    right: 14%;
-    animation: circle1 30s linear infinite;
-}
-
-@keyframes circle1 {
-    from {
-        transform: rotate(0deg) translate(-30px) rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg) translate(-30px) rotate(-360deg);
-    }
-}
-@keyframes circle2 {
-    from {
-        transform: rotate(0deg) translate(-30px) rotate(0deg);
-    }
-    to {
-        transform: rotate(260deg) translate(-30px) rotate(-260deg);
-    }
-}
-@keyframes circle3 {
-    from {
-        transform: rotate(0deg) translate(-30px) rotate(0deg);
-    }
-    to {
-        transform: rotate(300deg) translate(-30px) rotate(-300deg);
-    }
-}
-@keyframes circle4 {
-    from {
-        transform: rotate(0deg) translate(-30px) rotate(0deg);
-    }
-    to {
-        transform: rotate(140deg) translate(-30px) rotate(-140deg);
-    }
-}
 
 /* ------------------------ Hover counter animatie */
+
+/* Animation */
 @property --num {
     syntax: "<integer>";
     initial-value: 0;
@@ -184,17 +128,155 @@ ul li {
   .counter {
     transition: --num 5s;
     counter-set: num var(--num);
-    font: 800 40px system-ui;
+    font: 2em var(--font-heading1);
+    /* font: 800 40px system-ui; */
   }
   .counter::after {
     content: counter(num);
   }
   .counter:hover {
     --num: 100;
+    cursor: pointer;
   }
 
-/* ------------------------ THe Story Of... ------------------------ */
+/* ------------------------ The Blue Zones ------------------------ */
 
+#worldMap {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.blueZones {
+  /* background-color: #0C293A; */
+}
+
+.bz_intro {
+  font-family: var(--font-bodySans);
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* ------------------------ The 9 rules of life ------------------------ */
+
+.circles {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  
+  background-color: var(--color-grey-tint);
+  border: 2px solid #3DAABB;
+  width: 175px;
+  height: 175px;
+  padding: 20px;
+  border-radius: 100%;
+
+  text-align: center;
+  font-size: 1em;
+
+  color: var(--color-grey-tint);
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+
+.circle01 {
+  bottom: 0%;
+  left: 8%;
+  animation: circle1 30s linear infinite;
+}
+
+.circle02 {
+  top: 2%;
+  left: 28%;
+  animation: circle2 30s linear infinite;
+}
+
+.circle03 {
+  top: 17%;
+  left: 5%;
+  animation: circle3 30s linear infinite;
+}
+
+.circle04 {
+  top: 28%;
+  left: 17%;
+  animation: circle4 30s linear infinite;
+}
+
+.circle05 {
+  top: 1%;
+  right: 32%;
+  animation: circle4 30s linear infinite;
+}
+
+.circle06 {
+  top: 6%;
+  right: 4%;
+  animation: circle3 30s linear infinite;
+}
+.circle07 {
+  top: 21%;
+  right: 5%;
+  animation: circle1 30s linear infinite;
+}
+
+.circle08 {
+  top: 30%;
+  right: 26%;
+}
+
+.circle09 {
+  top: 30%;
+  right: 48%;
+}
+
+.circle:hover {
+  cursor: pointer;
+  color: var(--color-dark);
+  filter: grayscale(0%);
+  transition: 0.6s;
+}
+
+.circleImg {
+  width: 100%;
+}
+  
+
+/* ------------------------ The Story Of... ------------------------ */
+
+.about_content {
+    width: 50%;
+    /* height: 50%; */
+    margin: auto;
+    /* margin-top: 16%; */
+    text-align: center;
+}
+
+.aboutPersonChoice {
+    width: 50%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutPersonChoice img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.aboutImg {
+  width: 100%;
+}
+
+.backButton {
+  display: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ----------- Old ----------- */
 #div1 {
     background-color: var(--color-grey-tint);
     height: 100%;
@@ -244,4 +326,221 @@ ul li {
     height: 100%;
     width: 50%;
     float: left;
+}
+
+
+
+/* ------------------------ Footer ------------------------ */
+
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 50px;
+}
+
+#meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 0;
+}
+
+/* ------------------------------------------------ Images ------------------------------------------------ */
+.img {
+    position: absolute;
+    height: 4%;
+    width: auto;
+    z-index: 1;
+    border: none;
+    filter: grayscale(100%);
+    transition: 0.6s;
+}
+
+.img:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+  transition: 0.6s;
+}
+
+.img1 {
+    top: 5%;
+    left: 9%;
+    animation: circle1 30s linear infinite;
+}
+
+.img2 {
+    top: 15%;
+    left: 7%;
+    animation: circle2 30s linear infinite;
+}
+.img3 {
+    top: 7%;
+    left: 24%;
+    animation: circle3 30s linear infinite;
+}
+.img4 {
+    top: 13%;
+    left: 22%;
+    animation: circle4 30s linear infinite;
+}
+.img5 {
+    top: 3%;
+    right: 31%;
+    animation: circle4 30s linear infinite;
+}
+.img6 {
+    top: 6%;
+    right: 17%;
+    animation: circle3 30s linear infinite;
+}
+.img7 {
+    top: 11%;
+    right: 10%;
+    animation: circle2 30s linear infinite;
+}
+.img8 {
+    top: 15%;
+    right: 14%;
+    animation: circle1 30s linear infinite;
+}
+
+.img9 {
+    top: 1%;
+    left: 14%;
+    animation: circle1 30s linear infinite;
+}
+
+.img10 {
+    top: 2%;
+    right: 4%;
+    animation: circle1 30s linear infinite;
+}
+
+@keyframes circle1 {
+    from {
+        transform: rotate(0deg) translate(-30px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(-30px) rotate(-360deg);
+    }
+}
+@keyframes circle2 {
+    from {
+        transform: rotate(0deg) translate(-30px) rotate(0deg);
+    }
+    to {
+        transform: rotate(260deg) translate(-30px) rotate(-260deg);
+    }
+}
+@keyframes circle3 {
+    from {
+        transform: rotate(0deg) translate(-30px) rotate(0deg);
+    }
+    to {
+        transform: rotate(300deg) translate(-30px) rotate(-300deg);
+    }
+}
+@keyframes circle4 {
+    from {
+        transform: rotate(0deg) translate(-30px) rotate(0deg);
+    }
+    to {
+        transform: rotate(140deg) translate(-30px) rotate(-140deg);
+    }
+}
+
+
+/* ------------------------------------------------ Title animation ------------------------------------------------ */
+
+/* Recourse: https://codepen.io/alvarotrigo/pen/ExvqdNa */
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
